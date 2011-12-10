@@ -14,6 +14,7 @@ function randomPrize($db,$email,$venueid){
 	$left = $maxrandom - $given[0][0];
 	
 	//change rand(0,10)<n to adjust the probability of people getting a random prize
+	//userPrizes($db,$email,2) <n to adjust how many random prizes one person can earn
 	if(userPrizes($db,$email,2) <3 && rand(0,10)< 5 && $left > 0){
 		$prize = true;
 		
