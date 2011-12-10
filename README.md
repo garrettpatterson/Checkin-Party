@@ -3,52 +3,52 @@
 Checkin-Party is a small php mobile-optimized app to create an interactive party atmosphere among your guests using QR codes.  Its intended for short-term (hours not days), captive audiences with the goal of incentivizing your guests to *do* something, whether it's move around, learn more about targeted items etc...  It is flexible to be used for full smartphone use, manned-stations with paper "passes", or mixed.
 
 Possible uses could be:
-*Office party
-*Christmas Party
-*Open house
+* Office party
+* Christmas Party
+* Open house
 
 Other projects used:
 jQuery Mobile
 
 ##Files
-*charts.php
-**I should remove this
-*checkin.php
-**checkin handler for venue.php
-*index.php
-**home/splash page for use before and during the party
-**has triggers for 'pre-register' as well as 'no-phone' users
-*newuser.php
-**new user signup handler for start.php
-*nophone.php
-**Creates individualized QR code/party pass for participants
-*papercheckin.php
-**Creates QR codes for dummy users set up in the DB for paper-pass use
-*prizes.php
+* charts.php
+** I should remove this
+* checkin.php
+** checkin handler for venue.php
+* index.php
+** home/splash page for use before and during the party
+** has triggers for 'pre-register' as well as 'no-phone' users
+* newuser.php
+** new user signup handler for start.php
+* nophone.php
+** Creates individualized QR code/party pass for participants
+* papercheckin.php
+** Creates QR codes for dummy users set up in the DB for paper-pass use
+* prizes.php
 ** contains the php functions and logic for determinig prize winners
-*qr.php
+* qr.php
 ** has qr codes for each page and venue/station
-*start.php
+* start.php
 ** main registration entry point
-*venue.php
+* venue.php
 ** The page for actually checkin in
-*venuecheckin.php
-**page for manual checkin of paper pass users
-*venues.php
+* venuecheckin.php
+** page for manual checkin of paper pass users
+* venues.php
 ** full list of all your venues/stations and relevant information
 
 ##Setup
 1. Fork/Download all files
 2. Make sure sqlite3 is installed for php and local tools
-** I used PDO so it would be a snap to switch to MySQL
-** I checked in a blank sqlite db
-*** If you're using this make sure folder and file permissions are setup on your server to be able to write to the DB
+	** I used PDO so it would be a snap to switch to MySQL
+	** I checked in a blank sqlite db
+	*** If you're using this make sure folder and file permissions are setup on your server to be able to write to the DB
 3. Enter venue/station information into the "venue" table
 4. Within prizes.php configure your prize parameters
-** maxrandom on line 10
-** probability of getting a random prize on line 16
-** limit to number of random prizes someone can receive
-** maxfinish on line 32
+	** maxrandom on line 10
+	** probability of getting a random prize on line 16
+	** limit to number of random prizes someone can receive line 17
+	** maxfinish on line 32
 5. The "app" itself is ready, get some interns to print out some posters for each station and party on!
 
 ##Checking In
@@ -59,9 +59,9 @@ If you get the dreaded "what if people don't have a smartphone and/or QR code re
 1. Create as many blank entries in the user table as you expect to need passes for
 2. Print out QR code passes for each, hand them out to your guests.
 3. One person will need to be at each of your stations with their own smartphone, this becomes the checker-inner/Manual sCanner/ManScan.
-## On the first scan the attending person will need to select the station, and enter the global admin password.
-## This information will be remembed each subsequent time on that phone, so as long as they stay put all they will need to enter is people's emails if they so desire. *emails aren't necessary* but its nice for tracking...
-## Prize info will pop on the attendants phone, and they will hand prizes to the person with the pass
+	* On the first scan the attending person will need to select the station, and enter the global admin password.
+	* This information will be remembed each subsequent time on that phone, so as long as they stay put all they will need to enter is people's emails if they so desire. *emails aren't necessary* but its nice for tracking...
+	* Prize info will pop on the attendants phone, and they will hand prizes to the person with the pass
 4. Either people will preregister and print thier own pass OR, the first time they get checked in, their email can be entered and it will be saved for subsequent check ins.
 
 ##Prizes
@@ -77,9 +77,9 @@ The whole point is to incentivize people to go around and visit each of your sta
 The "prizelog" table logs who received what prizes at stations.  This is used to throttle the amount of prizes you allow each person in prizes.php and keep track of general "eligibility".
 
 #TODO
-## Real-time stats page to display during your party
-## Prize admin page 
-###To validate and track wether or not a prize has been given away
-### Validate who has won prizes at each station
-## store all config options in text file or DB
-## create admin pages to set up the party with stations etc...
+* Real-time stats page to display during your party
+* Prize admin page 
+** To validate and track wether or not a prize has been given away
+** Validate who has won prizes at each station
+* store all config options in text file or DB
+* create admin pages to set up the party with stations etc...
