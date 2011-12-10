@@ -12,43 +12,43 @@ jQuery Mobile
 
 ##Files
 * charts.php
-** I should remove this
+	* I should remove this
 * checkin.php
-** checkin handler for venue.php
+	* checkin handler for venue.php
 * index.php
-** home/splash page for use before and during the party
-** has triggers for 'pre-register' as well as 'no-phone' users
+	* home/splash page for use before and during the party
+	* has triggers for 'pre-register' as well as 'no-phone' users
 * newuser.php
-** new user signup handler for start.php
+	* new user signup handler for start.php
 * nophone.php
-** Creates individualized QR code/party pass for participants
+	* Creates individualized QR code/party pass for participants
 * papercheckin.php
-** Creates QR codes for dummy users set up in the DB for paper-pass use
+	* Creates QR codes for dummy users set up in the DB for paper-pass use
 * prizes.php
-** contains the php functions and logic for determinig prize winners
+	* contains the php functions and logic for determinig prize winners
 * qr.php
-** has qr codes for each page and venue/station
+	* has qr codes for each page and venue/station
 * start.php
-** main registration entry point
+	* main registration entry point
 * venue.php
-** The page for actually checkin in
+	* The page for actually checkin in
 * venuecheckin.php
-** page for manual checkin of paper pass users
+	* page for manual checkin of paper pass users
 * venues.php
-** full list of all your venues/stations and relevant information
+	* full list of all your venues/stations and relevant information
 
 ##Setup
 1. Fork/Download all files
 2. Make sure sqlite3 is installed for php and local tools
-	** I used PDO so it would be a snap to switch to MySQL
-	** I checked in a blank sqlite db
-	*** If you're using this make sure folder and file permissions are setup on your server to be able to write to the DB
+	* I used PDO so it would be a snap to switch to MySQL
+	* I checked in a blank sqlite db
+		* If you're using this make sure folder and file permissions are setup on your server to be able to write to the DB
 3. Enter venue/station information into the "venue" table
 4. Within prizes.php configure your prize parameters
-	** maxrandom on line 10
-	** probability of getting a random prize on line 16
-	** limit to number of random prizes someone can receive line 17
-	** maxfinish on line 32
+	* maxrandom on line 10
+	* probability of getting a random prize on line 16
+	* limit to number of random prizes someone can receive line 17
+	* maxfinish on line 32
 5. The "app" itself is ready, get some interns to print out some posters for each station and party on!
 
 ##Checking In
@@ -79,7 +79,7 @@ The "prizelog" table logs who received what prizes at stations.  This is used to
 #TODO
 * Real-time stats page to display during your party
 * Prize admin page 
-** To validate and track wether or not a prize has been given away
-** Validate who has won prizes at each station
+	* To validate and track wether or not a prize has been given away
+	* Validate who has won prizes at each station
 * store all config options in text file or DB
 * create admin pages to set up the party with stations etc...
