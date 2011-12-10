@@ -3,6 +3,7 @@
 Checkin-Party is a small php mobile-optimized app to create an interactive party atmosphere among your guests using QR codes.  Its intended for short-term (hours not days), captive audiences with the goal of incentivizing your guests to *do* something, whether it's move around, learn more about targeted items etc...  It is flexible to be used for full smartphone use, manned-stations with paper "passes", or mixed.
 
 Possible uses could be:
+
 * Office party
 * Christmas Party
 * Open house
@@ -56,6 +57,7 @@ The app is designed for full autonomy of your guests, other than having someone 
 
 ###Paper Passes
 If you get the dreaded "what if people don't have a smartphone and/or QR code reader" and can't just say "I don't care about people from 2005", there is an alternative solution.  You can use both at the same party, or I can see a scenario when you'll just make everyone use a paper pass.
+
 1. Create as many blank entries in the user table as you expect to need passes for
 2. Print out QR code passes for each, hand them out to your guests.
 3. One person will need to be at each of your stations with their own smartphone, this becomes the checker-inner/Manual sCanner/ManScan.
